@@ -4,3 +4,4 @@ pydantic
 numpy
 scikit-learn
 faiss-cpu
+python-dotenv

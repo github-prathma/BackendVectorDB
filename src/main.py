@@ -1,6 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from src.api.routes import router as api_router
+from dotenv import load_dotenv
+from pathlib import Path
+
+load_dotenv()
+# print("COHERE_API_KEY from .env:", os.getenv("COHERE_API_KEY"), flush=True)
 
 app = FastAPI()
 
