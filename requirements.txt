@@ -1,0 +1,6 @@
+FastAPI
+uvicorn
+pydantic
+numpy
+scikit-learn
+faiss-cpu
