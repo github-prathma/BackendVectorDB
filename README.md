@@ -24,7 +24,7 @@ vector-db-api
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd vector-db-api
+   cd <parent-folder>
    ```
 
 2. Install the required dependencies:
@@ -54,12 +54,12 @@ To build and run the application in a Docker container, use the following comman
 
 1. Build the Docker image:
    ```
-   docker build -t vector-db-api .
+   docker build -t <parent-folder> .
    ```
 
 2. Run the Docker container:
    ```
-   docker run -p 8000:8000 vector-db-api
+   docker run -p 8000:8000 <parent-folder>
    ```
 
 ## Additional Notes
