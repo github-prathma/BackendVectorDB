@@ -6,17 +6,23 @@ This project is development of REST APIs for indexing and querying documents wit
 ```
 vector-db-api
 ├── src
-│   ├── main.py          # Entry point of the application
+│   ├── main.py                # Entry point of the application
 │   ├── api
-│   │   └── routes.py    # API endpoints for CRUD operations
+│   │   └── routes.py          # API endpoints for CRUD operations and embedding
 │   ├── db
-│   │   └── vector_db.py  # Vector database logic
-│   └── models
-│       └── document.py   # Data models for Chunk, Document, and Library
-├── requirements.txt      # Project dependencies
-├── Dockerfile             # Docker image build instructions
-├── .dockerignore          # Files to ignore in Docker build
-└── README.md              # Project documentation
+│   │   └── vector_db.py       # Vector database logic and indexing algorithms
+│   ├── models
+│   │   └── document.py        # Data models for Chunk, Document, and Library
+│   ├── repositories
+│   │   └── library_repository.py # Data access layer for libraries
+│   └── services
+│       ├── library_service.py # Business logic for libraries and chunks
+│       └── vector_service.py  # Business logic for vector indexing/search
+├── requirements.txt           # Project dependencies
+├── Dockerfile                 # Docker image build instructions
+├── .dockerignore              # Files to ignore in Docker build
+├── test_env.py                # Script to test .env variable loading
+└── README.md                  # Project documentation
 ```
 
 ## Setup Instructions
