@@ -52,25 +52,25 @@ Endpoints call LibraryService, which uses LibraryRepository to store and retriev
 Endpoints call LibraryService methods to manage chunks within documents in a library.
 
 2. Embedding with Cohere
-- Embedding a Chunk (/libraries/{library_id}/chunks/{chunk_id}/embed/)
+- Embedding a Chunk ```(/libraries/{library_id}/chunks/{chunk_id}/embed/)```
    - The endpoint fetches the chunk’s text.
    - Calls **get_cohere_embedding**, which sends the text to Cohere’s API using the API key from .env. Receives the embedding and stores it in the vector database (VectorDB).
    - Receives the embedding and stores it in the vector database (VectorDB).
 
-- Embedding all Chunks (/libraries/{library_id}/embed_all/)
+- Embedding all Chunks ```(/libraries/{library_id}/embed_all/)```
    - Loops through all chunks in all documents of the library.
    - Embeds each chunk using Cohere and stores the embeddings in the vector database.
 
 3. Indexing and Search
-- Indexing (/libraries/{library_id}/index/):
+- Indexing ```(/libraries/{library_id}/index/)```
    - Accepts a list of embeddings and chunk IDs.
    - Stores them in the vector database for fast retrieval.
-- k-NN Search (/libraries/{library_id}/search/)
+- k-NN Search ```(/libraries/{library_id}/search/)```
    - Accepts a query embedding.
    - Uses the selected vector index (brute-force or ball tree) to find the most similar chunks.
 
 ## Testing
-- Use Swagger UI at http://localhost:8000/docs to interactively test all endpoints.
+- Use Swagger UI at ```http://localhost:8000/docs``` to interactively test all endpoints.
 - test_env.py can be run to verify that .env variables are loaded correctly.
 
 ## Docker
